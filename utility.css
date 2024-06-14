@@ -1,0 +1,25 @@
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+    /* border-radius: 10px; Make the track rounded */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FDF4E6;
+    /* border-radius: 5px; Make the ends curved */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  /* .border{
+    border: 5px solid red;
+  } */
