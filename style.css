@@ -27,6 +27,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 /* Home start */
 
 .container0 {
@@ -175,7 +177,7 @@ body {
     position: relative;
     background-color: var(--color);
 
-    align-items: flex-start;
+    align-items: center;
 
 }
 
@@ -419,6 +421,8 @@ body {
     max-width: 100%;
 }
 
+
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -426,7 +430,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto !important;
 }
 
 .swiper-slide img {
@@ -443,6 +446,8 @@ body {
 
     height: 50vh;
     width: 70vw;
+    max-height: 482px;
+    min-height: 350px;
 }
 
 .swiper-button-prev-n {
@@ -549,6 +554,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
 }
 

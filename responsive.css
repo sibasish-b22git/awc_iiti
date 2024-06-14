@@ -72,6 +72,10 @@
         padding: 0 30px;
     }
 
+    .container3{
+        min-height: 550px !important;
+    }
+
     .container4 .content4 .donate-box h2{
         font-size: 20px;
     }
@@ -97,5 +101,25 @@
     }
 
 
+
+}
+
+@media only screen and (min-width: 1500px){
+
+    .container0,.container0 .box, .container1, .container5{
+        max-height: 787px;
+    }
+
+    .container2{
+        max-height: 562px;
+    }
+
+    .container3{
+        max-height: 770px;
+    }
+
+    .container4, .container7{
+        max-height: 445px;
+    }
 
 }
