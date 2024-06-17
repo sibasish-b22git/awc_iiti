@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWC-N</title>
+    <title>AWC</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -25,46 +24,103 @@
             <nav>
 
                 <div class="logo">
-                    <a href="#home" style="text-decoration: none; color: white;"><img src="assets/images/awc_logo_light.png" alt="" ></a>
-                    <a href="#home" style="text-decoration: none; color: white;"><span id="logo-text">Animal Welfare Cell</span></a>
+                    <a href="#home" style="text-decoration: none; color: white;"><img
+                            src="assets/images/awc_logo_light.png" alt=""></a>
+                    <a href="#home" style="text-decoration: none; color: white;"><span id="logo-text">Animal Welfare
+                            Cell</span></a>
                 </div>
 
-                <ul class="navlist hidelist">
-                    <li><a href="#home" style="text-decoration: none; color: white;">Home</a></li>
-                    <li><a href="#about-us" style="text-decoration: none; color: white;">About Us</a></li>
+                <ul class="navlist hide">
+                    <li class="in-view"><a href="#home" style="text-decoration: none; color: white;">Home</a></li>
+                    <li class="about-us"><a href="#about-us" style="text-decoration: none; color: white;">About Us</a>
+                    </li>
                     <li><a href="#stories" style="text-decoration: none; color: white;">Our Stories</a></li>
                     <li><a href="#faq" style="text-decoration: none; color: white;">FAQs</a></li>
-                    <li>Contact</li>
 
+                    <li class="know-more" style="padding: 14px 0;">Know More <svg width="25px" height="25" fill="none"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+
+                    <li><a href="#contact" style="text-decoration: none; color: white;">Contact</a></li>
+
+                    <!-- Know More Dropdown -->
+
+                    <div class="dropdown" style="position: absolute;">
+                        <ul class="droplist">
+                            <a href="https://docs.google.com/spreadsheets/d/1TOC5ldbfSos2OHxY2BwzzQjQ980ysQ3YSUqqmtuZTbY/edit?usp=sharing"
+                                style="text-decoration: none; color: black;">Animal Directory</a>
+                            <a href="#" class="feeding-zones" style="text-decoration: none; color: black;">Feeding
+                                zones</a>
+                            <a href="#" style="text-decoration: none; color: black;">Acts</a>
+                        </ul>
+                    </div>
+
+                    <!-- Know More Dropdown end-->
 
                 </ul>
 
-                <button class="donate-btn">Donate</button>
+
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <button class="donate-btn">Donate</button>
+                    <img class="hamburger show-ham" src="assets/images/hamburger.svg" alt="" style="display: none;">
+                </div>
             </nav>
         </nav>
-        <!--  -->
-        <!-- <nav class="sidebar">
-            <nav>
-                <ul class="navlist">
-                    <li><a href="#home" style="text-decoration: none; color: white;">Home</a></li>
-                    <li><a href="#about-us" style="text-decoration: none; color: white;">About Us</a></li>
-                    <li>Our Stories</li>
-                    <li>FAQs</li>
-                    <li>Contact</li>
-                </ul>
 
-            </nav>
-        </nav> -->
+        <!-- Menu for Phone start-->
+
+        <nav class="menu">
+            <ul class="menulist ">
+                <a href="#home" style="text-decoration: none; color: black;" class="in-view">Home</a>
+                <a href="#about-us" style="text-decoration: none; color: black;">About Us</a>
+                <a href="#stories" style="text-decoration: none; color: black;">Our Stories</a>
+                <a href="#faq" style="text-decoration: none; color: black;">FAQs</a>
+                <li style="display: flex; flex-direction: column;">
+                    <a href="https://docs.google.com/spreadsheets/d/1TOC5ldbfSos2OHxY2BwzzQjQ980ysQ3YSUqqmtuZTbY/edit?usp=sharing"
+                        style="text-decoration: none; color: black;">Animal Directory</a>
+                    <a class="feeding-zones" style="text-decoration: none; color: black;">Feeding
+                        zones</a>
+                    <a href="#" style="text-decoration: none; color: black;">Acts</a>
+                </li>
+                <a href="#contact" style="text-decoration: none; color: black;">Contact</a>
+            </ul>
+        </nav>
+
+        <!-- Menu for Phone end-->
+
+
 
         <div class="box"></div>
-        <div class="text" data-aos="fade-up">
+        <div class="text" data-aos="fade-up" style="padding: 0 10px;">
             <span>Animal Welfare Cell</span>
             <span>IIT Indore</span>
             <span>Advocating for our furry friends one paw at a time</span>
         </div>
+
+
     </div>
 
     <!-- Home end -->
+
+    <!-- Feeding Zone window start-->
+
+    <div>
+        <div class="fz">
+
+            <img src="assets/images/feeding_zones.jpg" alt="" style="object-fit: contain;">
+            <div class="fz-btn">
+                <button class="close-btn btn" style="justify-content: center;">Close <img src="assets/images/close.svg"
+                        alt="" style="padding: 0 0;"></button>
+                <a href="assets/images/feeding_zones.jpg" download><button
+                        class="download-btn btn">Download</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Feeding Zone window end-->
 
     <!-- About-Us start -->
 
@@ -379,18 +435,73 @@
     <!-- testimonials end -->
 
     <!-- footer start -->
-    <div class="container7 border container">
+    <div id="contact" class="container7 border container" style="color: white;">
         <div class="content7 border content">
+
+            <div class="footer-text">
+                <div class="footer-title">
+                    <h1>Animal Welfare cell</h1>
+                    <img src="assets/images/location.svg" alt="">
+                    <h3>IIT Indore</h3>
+                    <h5>Khandwa Rd, Simrol, Indore 453552, Madhya Pradesh</h4>
+                </div>
+                <div class="footer-desc">
+                    <div class="contact">
+                        <h3>Contact <img src="assets/images/whatsapp.svg" alt="" style="width: 15px;"></h3>
+
+                        <div class="whatsapp-contacts" style="display: flex; flex-direction: column;">
+                            <span>person: +91 1234567890</span>
+                            <span>person: +91 1234567890</span>
+                            <span>person: +91 1234567890</span>
+                        </div>
+
+                        <div class="tech-contacts" style="display: flex; flex-direction: column;">
+                            <h5>For Technical Issues</h5>
+                            <span>person: +91 1234567890</span>
+                            <span>person: +91 1234567890</span>
+                        </div>
+
+                        <div class="email" style="display: flex; flex-direction: column;">
+                            <h5>E-mail</h5>
+                            <span>xyz@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="key-links">
+                        <h3>Key Links</h3>
+                        <div class="links">
+                            <span><a href="https://www.iiti.ac.in/" style="text-decoration: none; color: white;">IIT
+                                    Indore</a></span>
+                        </div>
+                    </div>
+
+                    <div class="join-us">
+                        <h3>Join Us <img src="assets/images/link.svg" alt="" style="width: 15px;"></h3>
+                        <div class="links">
+                            <span><a href="https://www.instagram.com/awc_iiti?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                    style="display: flex; justify-content: center; text-decoration: none; color: white;"><img
+                                        src="assets/images/instagram.svg" alt=""
+                                        style="padding-right: 5px;">awc_iiti</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <img class="footer-logo" src="assets/images/awc_logo_nobg.png" alt=""
+                style="object-fit: contain; width: 400px;">
 
         </div>
     </div>
     <!-- footer end -->
 
+    <!-- copyright info start -->
 
+    <div class="container8  container" style="color: white;">
+        <div class="content8  content">
 
+            Copyright Info (coming soon)
 
-
-
+        </div>
+    </div>
 
 
 
@@ -403,7 +514,6 @@
 
     <script src="script.js"></script>
     <script src="node_modules/aos/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 
     <!-- Swiper JS -->

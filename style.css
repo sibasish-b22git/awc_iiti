@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+@font-face {
+    font-family: 'waterlily';
+    src: url(assets/fonts/waterlily/Waterlily.ttf) format("truetype");
+}
 
 :root {
     --color: #FDF4E6;
@@ -95,9 +98,29 @@ body {
     justify-content: center;
     align-items: center;
 
-    font-size: 18px;
+    font-size: 17px;
+    position: relative;
 
 }
+
+.know-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar nav .navlist li:hover,
+.navbar nav .navlist li a:hover,
+.navbar nav .navlist .in-view a {
+    transform: scale(1.1) !important;
+    color: var(--color) !important;
+    transition: all 0.1s ease-in-out;
+    svg path {stroke: var(--color) !important;};
+    cursor: pointer;
+
+    
+}
+
 
 .navbar nav .logo {
     display: flex;
@@ -106,6 +129,11 @@ body {
     gap: 20px;
     font-size: 20px;
     font-weight: 500;
+    
+}
+
+.navbar nav .logo #logo-text{
+    font-family: 'waterlily';
 }
 
 .navbar nav .logo img {
@@ -165,7 +193,188 @@ body {
     padding: 40px 0 0 0;
 }
 
+
+/* Sidebar start */
+
+.menu {
+    background-color: var(--color);
+    /* height: 300px; */
+    width: 200px;
+    position: fixed;
+    top: 77.2px;
+    right: 75px;
+    z-index: 10;
+    border-radius: 10px;
+
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out !important;
+}
+
+
+.menu .menulist {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.menu .menulist a {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 1.5px 0;
+}
+
+.menu .menulist a:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid black;
+}
+
+.menu .menulist a:hover,
+.menu .menulist a.in-view {
+    background-color: black;
+    color: white !important;
+}
+
+.menulist li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menulist li a{
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 15px;
+}
+
+/* Sidebar end */
+
+/* Drop down =============== (Temporary CSS) JS will be implemented later */
+
+.navbar .navlist .know-more:hover~.dropdown {
+    height: 134.4px !important;
+}
+
+.dropdown {
+    background-color: var(--color);
+    position: absolute;
+    top: 77.2px;
+    right: 105px;
+    z-index: 10;
+    border: none;
+    border-radius: 5px;
+
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.dropdown:hover {
+    height: 134.4px !important;
+
+}
+
+.dropdown:hover~.know-more {           /*not working*/
+    transform: scale(1.1) !important;
+    color: var(--color) !important;
+
+}
+
+.dropdown .droplist {
+
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown ul a {
+    padding: 10px;
+    color: black;
+}
+
+.dropdown .droplist a:hover {
+    background-color: black;
+    color: white !important;
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+
 /* Home end */
+
+/* Feeding zone start */
+
+.fz{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    height: 0;
+    overflow: hidden;
+}
+
+.fz img{
+    height: 80%;
+    max-width: 98vw;
+    padding: 10px 0;
+}
+
+.fz .fz-btn{
+    display: flex;
+    gap: 10px;
+
+}
+
+.fz .fz-btn button{
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.download-btn{
+    background-color: var(--color);
+
+}
+
+.download-btn:hover{
+    cursor: pointer;
+    background-color: #bbb4a7 !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.close-btn{
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+    background-color: rgb(252, 84, 84) !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.show-fz{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+/* Feeding zone end */
 
 /* About-Us start */
 
@@ -247,12 +456,14 @@ body {
     padding-left: 40px;
 }
 
-.container1 .content1 .container1-pic{
+.container1 .content1 .container1-pic {
     width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 .container1 .content1 .container1-pic img {
-
+    margin: 15px;
     width: 365px;
     right: 150px;
     top: 85px;
@@ -605,7 +816,7 @@ body {
 
 }
 
-.container5 .content5 .faq-wrapper .faq-box{
+.container5 .content5 .faq-wrapper .faq-box {
     padding-top: 1.5rem;
     margin-top: 0.5rem;
     border-bottom: 3px solid black;
@@ -623,20 +834,20 @@ body {
     justify-content: space-between;
 }
 
-.answer{
+.answer {
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out 0.6s;
 
 }
 
-.answer p{
+.answer p {
     padding: 25px 0px;
 
 }
 
-.container5 .content5 .faq-wrapper .active .answer{
-    
+.container5 .content5 .faq-wrapper .active .answer {
+
     height: auto;
     max-height: 122px;
 
@@ -649,7 +860,7 @@ body {
     display: flex;
     justify-content: center;
 
-    height: 45vh;
+    height: auto;
     position: relative;
     background-color: black;
 
@@ -664,17 +875,66 @@ body {
     padding: 45px 146px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
     position: relative;
 
+}
+
+.footer-title{
+    padding-bottom: 30px;
+}
+
+
+.footer-desc{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.footer-desc .contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.whatsapp-contacts, .tech-contacts, .email, .links{
+    padding-top: 20px;
+}
+
+h5{
+    font-weight: 300;
+}
+
+/* Footer end */
+
+/* Copyright start */
+
+.container8 {
+    display: flex;
+    justify-content: center;
+
+    height: 60px !important;
+    position: relative;
+    background-color: rgb(25, 25, 25);
+
+    align-items: center;
+
+}
+
+.container8 .content8 {
+    max-width: var(--maxw);
+    width: 100vw;
+    padding: 0 150px;
+    margin: 100px 0;
+    box-sizing: border-box;
+
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
 
 }
-
-
-
-
-
