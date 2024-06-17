@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- First Line -->
+  <rect y="10" width="40" height="4" rx="2" ry="2" fill="#FDF4E6"/>
+  <!-- Second Line -->
+  <rect y="18" width="40" height="4" rx="2" ry="2" fill="#FDF4E6"/>
+  <!-- Third Line -->
+  <rect y="26" width="40" height="4" rx="2" ry="2" fill="#FDF4E6"/>
+</svg>
