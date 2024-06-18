@@ -904,7 +904,9 @@ body {
 h5{
     font-weight: 300;
 }
-
+.container7 .content7 a:hover{
+    transform: scale(1.1) !important;
+}
 /* Footer end */
 
 /* Copyright start */
@@ -938,3 +940,4 @@ h5{
 
 
 }
+
