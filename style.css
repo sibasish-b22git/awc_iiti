@@ -906,6 +906,7 @@ h5{
 }
 .container7 .content7 a:hover{
     transform: scale(1.1) !important;
+    color: var(--color) !important;
 }
 /* Footer end */
 
@@ -934,10 +935,18 @@ h5{
     position: relative;
 
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-
-
-
+}
+.container8 .content8 div{
+    position: relative;
+    display: flex;
+    font-size: small;
 }
 
+.container8 .content8 a{
+    color: var(--color);
+    text-decoration: none;
+}
+.container8 .content8 a:hover{
+    color: #bbb4a7;
+}
