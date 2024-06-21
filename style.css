@@ -198,7 +198,6 @@ body {
 
 .menu {
     background-color: var(--color);
-    /* height: 300px; */
     width: 200px;
     position: fixed;
     top: 77.2px;
@@ -649,7 +648,13 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    cursor: pointer;
 }
+
+.swiper-slide img:hover{
+    opacity: 0.9;
+}
+
 
 .swiper {
     margin-left: auto;
@@ -817,21 +822,36 @@ body {
 }
 
 .container5 .content5 .faq-wrapper .faq-box {
-    padding-top: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     margin-top: 0.5rem;
     border-bottom: 3px solid black;
     cursor: pointer;
 
     background-color: var(--color);
+    opacity: 0.82;
 
     padding-left: 2rem;
     padding-right: 2rem;
 
+    border-radius: 15px;
+
+
+}
+
+.container5 .content5 .faq-wrapper .faq-box:hover{
+    opacity: 1;
 }
 
 .container5 .content5 .faq-wrapper .faq-box .question {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container5 .content5 .faq-wrapper .faq-box .question h3{
+    font-weight: 500;
 }
 
 .answer {
